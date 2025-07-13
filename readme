@@ -1,0 +1,66 @@
+
+
+## 🚀 Project Overview
+
+A full-stack PHP/MySQL application for:
+- **Customers**: apply for loans, track repayment schedules, upload proofs
+- **Loan Officers**: review applications, update statuses, track repayments
+- **Administrators**: manage loan types, users, view dashboards & reports
+
+---
+
+
+## 🛠️ Setup & Credentials
+
+1. **Database**  
+   - Import `loanportal.sql` into your MySQL/MariaDB server.  
+   - Update `dbconnection.php` with your DB host/user/password.
+
+2. **Default Login Credentials**  
+   - **Administrator**  
+     - Email: `admin@gmail.com`  
+     - Password: `123`  
+   - **Loan Officer**  
+     - Email: `aishh@gmail.com`  
+     - Password: `aish`  
+   - **Sample Customer**  
+     - Email: `sadia@gmail.com`  
+     - Password: *sadia*  
+
+3. **Customer Accounts**  
+   - New customers can register via `Customer/register.php`.  
+   - Passwords are hashed with PHP’s `password_hash()` for security.
+
+4. **Environment Variables (Optional)**  
+   Instead of hard-coding, you can create a `.env` with:
+   ```
+   DB_HOST=localhost
+   DB_NAME=loanportal
+   DB_USER=root
+   DB_PASS=your_password
+   ```
+   Then update `dbconnection.php` to read these values.
+
+---
+
+## 💡 Quick Tips
+
+- **Uploads**: All payment proofs go to `uploads/repayments/`—ensure the folder is writable.  
+- **Security**: Don’t commit real credentials; use placeholders or a `.gitignore`’d `.env`.  
+- **Debugging**: Enable `display_errors` in `php.ini` during development; disable in production.
+
+---
+
+## 🤝 Acknowledgments
+
+- Bootstrap 5 & Bootstrap Icons for sleek styling  
+- PHP PDO for secure database interactions  
+- Your own ingenuity! 😉
+
+---
+
+> _“The journey of a thousand loans begins with a single click.”_ 😊
+
+---
+
+📝 _Feel free to update this README with any new features or deployment notes!_
